@@ -1,0 +1,10 @@
+2025-02-15 13:48:02,735 - DEBUG - 1550340270.py:6 - This is a debug message
+2025-02-15 13:48:02,738 - INFO - 1550340270.py:7 - This is an info message
+2025-02-15 13:48:02,740 - WARNING - 1550340270.py:8 - This is a warning message
+2025-02-15 13:48:02,741 - ERROR - 1550340270.py:9 - This is an error message
+2025-02-15 13:48:02,742 - CRITICAL - 1550340270.py:10 - This is a critical message
+2025-02-15 13:52:05,101 - DEBUG - 2421171661.py:12 - This is a debug message
+2025-02-15 13:52:05,104 - INFO - 2421171661.py:13 - This is an info message
+2025-02-15 13:52:05,109 - WARNING - 2421171661.py:14 - This is a warning message
+2025-02-15 13:52:05,113 - ERROR - 2421171661.py:15 - This is an error message
+2025-02-15 13:52:05,116 - CRITICAL - 2421171661.py:16 - This is a critical message
