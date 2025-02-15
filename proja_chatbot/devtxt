@@ -1,0 +1,35 @@
+import gradio as gr
+import ollama
+
+# Function to interact with the selected model
+def chat_with_bot(user_message, model_choice):
+    response = ollama.chat(model=model_choice, messages=[{"role": "user", "content": user_message}])
+    return response["message"]
+
+# List of available models
+model_options = [
+    "deepscaler:latest",
+    "deepseek-r1:1.5b",
+    "phi4:latest",
+    "llama3.2-vision:11b",
+    "nomic-embed-text:latest",
+    "codellama:latest",
+    "llama3:8b",
+    "llama3.2:1b"
+]
+
+# Define Gradio Chatbot Interface
+chatbot_ui = gr.Interface(
+    fn=chat_with_bot,
+    inputs=[
+        gr.Textbox(label="Chat Message"),
+        gr.Dropdown(choices = model_options, label="Models", info="Will add more models later!"),
+        #gr.Dropdown(label="Select Model", choices=model_options, default="deepscaler:latest")
+    ],
+    outputs=gr.Textbox(label="Bot Response"),
+    title="AI-Chatbot with Model Selection",
+    description="Chat with an AI chatbot powered by Ollama, with the ability to select different models."
+)
+
+if __name__ == "__main__":
+    chatbot_ui.launch(share=True)
